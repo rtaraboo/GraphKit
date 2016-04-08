@@ -166,9 +166,13 @@ static CGFloat kDefaultAnimationDuration = 2.0;
         CGRect frame = CGRectMake(0, 0, kDefaultLabelWidth, kDefaultLabelHeight);
         UILabel *item = [[UILabel alloc] initWithFrame:frame];
         item.textAlignment = NSTextAlignmentCenter;
-        item.font = [UIFont boldSystemFontOfSize:13];
-        item.textColor = [UIColor lightGrayColor];
+        item.font = [UIFont boldSystemFontOfSize:15];
+        item.textColor = [UIColor darkGrayColor];
+        item.shadowColor = [UIColor whiteColor];
+        
+        item.shadowOffset = CGSizeMake(0, -1);
         item.text = [self.dataSource titleForBarAtIndex:idx];
+        
         
         [items addObject:item];
     }
